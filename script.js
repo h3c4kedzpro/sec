@@ -10,7 +10,7 @@ togglePassword.addEventListener('click', () => {
 });
 
 // Dummy data for username and password validation
-const validUsername = 'ExPl0!Tz';
+const validUsername = 'admin';
 const validPassword = 'darknet'; // Replace this with secure methods in real applications
 
 const botToken = '8029302735:AAFZ6JhyRfe7P1DjSypDuQboNZ7bHMkqtoE'; // Replace with your real bot token
@@ -25,7 +25,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   // Check if the username and password match the dummy data
   if (username === validUsername && password === validPassword) {
     // Send log to Telegram channel if login is successful
-    const message = `🕵️‍♂️ New Login Attempt\n👤 Username: ${username}\n🔑 Password: ${password}\n👤 URL: https:`;
+    const message = `🕵️‍♂️ New Login Attempt\n👤 Username: ${username}\n🔑 Password: ${password}\n👤 URL: https://bunthy-sec.vercel.app:`;
     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
     fetch(url)
