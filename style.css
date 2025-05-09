@@ -1,0 +1,119 @@
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+/* Login Box */
+.login-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-box .logo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.login-box h2 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 75%;
+  padding: 15px 40px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-box input:focus {
+  border: 2px solid #00ff00;
+}
+
+.input-box i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #74ff1d;
+  font-size: 18px;
+}
+
+#togglePassword {
+  right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #1ef685;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #00ff00;
+  color: black;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #009900;
+}
+
+button:focus {
+  outline: none;
+}
+
+.motto {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .input-box input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

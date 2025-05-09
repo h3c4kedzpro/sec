@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrKʜ_ExPl0!Tz - Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background-color: #0a0a1a;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: Courier;
+            color: #00af04;
+            margin-top: 75px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 15px;
+            font-family: Courier;
+            color: #bbbbbb;
+        }
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  justify-content: center;
+}
+h2 {
+  font-size: 24px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #1f1f1f;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0f0;
+  color: #121212;
+}
+
+input, button {
+  font-size: 16px;
+}
+
+#output {
+  white-space: pre-wrap;
+}
+
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0a0a1a;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00af04;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #0a0a1a, #1e1e2f);
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/XxWZxJtd/9d8c399cc0d4c6ea523ce3db933024b1.jpg') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero h4 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 45px;
+            margin-bottom: 16px;
+            font-family: 'Fira Code', monospace;
+            color: #00ea05;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin: 10px 0;
+            font-weight: bold;
+            height: 5px;
+            font-family: 'Source Code', monospace;
+            color: #bbbbbb;
+            z-index: 2;
+        }
+
+        .hero a {
+            font-family: Arial;
+        }
+
+        .hero a:hover {
+            background-color: #00ed05;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            color: #00af04;
+            font-family: Times New Roman;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            background: linear-gradient(340deg, #13f900, #00ed2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section p {
+            font-size: 1.14rem;
+            line-height: 1.5;
+            color: #bbbbbb;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #0a0a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 1s ease-in-out;
+            transform-style: preserve-3d;
+            position: relative;
+            overflow: hidden;
+            transform: rotateY(0deg);
+        }
+
+        .service.flipped {
+            transform: rotateY(0deg);
+        }
+
+        .service img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            font-weight: bold;
+            background: linear-gradient(0deg, #660000, #03ff30, #16ff03);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.3rem;
+        }
+        
+        .service h2 {
+            font-weight: bold;
+            background: linear-gradient(0deg, #ffffff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.0rem;
+        }        
+
+        .service p {
+            font-size: 1.0rem;
+            color: #bbbbbb;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #00af04;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #00af04;
+        }
+
+        /* Secret Page */
+        .secret-page {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #0a0a1a;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .secret-page.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-cursor {
+            from,
+            to {
+                border-right-color: transparent;
+            }
+
+            50% {
+                border-right-color: silver;
+            }
+        }
+
+        @keyframes hide-cursor {
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .typing-effect {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid silver;
+            display: inline-block;
+            animation:
+                typing 5s steps(30, end),
+                blink-cursor 0.2s step-end infinite,
+                hide-cursor 0.1s 4.5s forwards;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0a0a1a;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 14px;
+            padding: 6.5px 12px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 7px;
+            background-color: #00af04;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Hack', monospace;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 0;
+        }
+
+        nav a:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background-color: #00af04;
+            box-shadow: 0 5px 15px rgba(32,255,14,0.5);
+        }
+
+        nav a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        #secret-link {
+            background-color: #ff0000;
+        }
+
+        #secret-link:hover {
+            background-color: #cc0000;
+            box-shadow: 0 8px 15px rgba(255, 0, 0, 0.5);
+        }
+
+        #play-audio {
+            position: fixed;
+            top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            right: 20px;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            background-color: #ff0000;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 3;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+        }
+
+        #play-audio:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+            background-color: #cc0000;
+        }
+    
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #0a0a1a;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            display: none;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            background-color: #00af04;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal button:hover {
+            background-color: #00af04;
+        }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+       /* Basic Button Style */
+        .button {
+            background-color: #ff0000; /* Blue background */
+            color: #ffffff; /* White text */
+            padding: 10px 20px; /* Padding inside the button */
+            font-size: 18px; /* Font size */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth background color transition */
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block; /* Allow the link to behave like a button */
+            text-align: center; /* Center text */
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #ff0202; /* Darker blue when hovered */
+        }
+
+        /* Button active effect */
+        .button:active {
+            background-color: #29ed00; /* Even darker blue when button is clicked */
+        }
+.modal-content {
+    background-color: #0a0a1a;
+    margin: 35% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 45px;
+    text-align: center;
+    color: white;
+    transform: translateY(-50px);
+    opacity: 0;
+    position: relative;
+    animation: slideIn 0.5s forwards;
+}
+
+    .modal-content img {
+    width: 350px; /* ইমেজ সাইজ */
+    height: auto;
+    position: absolute;
+    top: -135px; /* ইনপুট বক্সের ঠিক উপর আনতে */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    padding: 5px;
+}
+    
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keyframes for Modal Animation */
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fade-in">
+        <img src="https://i.ibb.co/gLTFwNS1/file-000000007a9061f6bc6af34c932c7818-conversation-id-67f52c45-a5c0-8000-bdc4-0c549f10394a-message-i.png" alt="LADIN-SK's Logo">
+        <h1>MrKʜ_ExPl0!Tz</h1>
+    </header>
+
+    <p>CAMBODIA CYBER SECURITY FORCE DYNAMICS HACKER</p>
+
+    <!-- Navigation -->
+    <nav class="fade-in">
+        <a href="#about"><span>About</span></a>
+        <a href="#services"><span>Services</span></a>
+        <a href="#contact"><span>Contact</span></a>
+        <a href="#terminal"><span>Terminal</span></a>        
+    </nav>
+        <nav class="fade-in">
+        <a href="#" id="secret-link"><span><i style="color: black;font-size: 20px" class="fa-solid fa-skull"></i></span></a>        <a href="#tutorial"><span>Tutorial</span></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero fade-in">
+        <div>
+            <h4 class="typing-effect">Welcome to My MrKH_ExPl0!Tz Sec</h4>
+            <p>Securing your digital life with advanced cybersecurity solutions.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="section fade-in">
+            <h2><i class="fa-regular fa-id-card fa-xl"></i> About Me</h2>
+            <hr>
+            <p>
+                Hi, I'm <b>MrKʜ_ExPl0!Tz</b> mission—an initiative focused on protecting digital rights, exposing corruption, and fighting for freedom through advanced security techniques. This aspect of your work represents a sophisticated digital defense system, a set of tools, and a strategy aimed at ensuring online privacy, countering cyber threats, and leveraging hacking skills for the greater good.
+            </p>
+            <p>
+                My mission is to provide cutting-edge cybersecurity solutions that safeguard your digital infrastructure.
+                Whether you're a small business or a large enterprise, I can help you stay ahead of cybercriminals and protect your sensitive data.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section fade-in">
+            <h2><i class="fa-brands fa-servicestack fa-xl"></i> Services</h2>
+            <hr>
+            <div class="services">
+                <div class="service">
+                    <img src="https://i.ibb.co/RpTBpfqm/1744055967649.jpg" alt="Ethical Hacking">
+                    <h3>HACKED BY MrKʜ_ExPl0!Tz</h3>
+                    <h2>Message</h2>                    
+                    <p>
+"Hacked by MrKʜ_ExPl0!Tz - Fight for Truth and Freedom. The time for silence is over."
+
+Across Thailand, citizens begin to see the message. News outlets scramble to cover the breach. The government is caught off-guard, and panic sets in as sensitive data begins to leak.
+                    </p>
+   <!-- The button as a link -->
+    <a href="https://t.me/MrKH_Expl0itz" class="button" target="_blank">Join Channel</a>                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section fade-in">
+            <h2><i class="fa-solid fa-address-book fa-xl"></i> Contact</h2>
+            <hr>
+            <div class="contact">
+                <p><i class="fa-solid fa-envelope-circle-check"></i> Email: <a href="mailto:mrkh.expl0itz@gmail.com">mrkh.expl0itz@gmail.com</a></p>
+                <p><i class="fa-brands fa-tiktok"></i> TikTok: <a href="#" target="_blank">Followed</a></p>
+                <p><i class="fa-brands fa-telegram"></i> Telegram: <a href="https://t.me/MrKH_Expl0itz" target="_blank">Join Channel</a></p>                
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://whatsapp.com/channel/0029VbAunY5Eawdn17VXID04" target="_blank">ᯓ➤Join Group</a></p>
+                <hr>
+            </div>
+        </section>
+
+        <!-- Secret Page -->
+        <div id="secret-page" class="secret-page fade-in">
+            <h2>Welcome to the Secret Page!</h2>
+            <p>
+                You have successfully accessed the secret page. This page is only visible to those who know the password.
+                Here, you can find exclusive resources and advanced cybersecurity tips.
+                Feel free to explore and enhance your knowledge.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fade-in">
+        <p>&copy; 2019 MrKʜ_ExPl0!Tz. All rights reserved.</p>
+    </footer>
+    
+
+
+     </script>        
