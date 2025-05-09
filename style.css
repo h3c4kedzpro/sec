@@ -1,75 +1,80 @@
 body {
   margin: 0;
   padding: 0;
-  background: black;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 .login-box {
-  background: #111;
+  background: rgba(0, 0, 0, 0.8);
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00ff00;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ff00;
+  max-width: 350px;
+  margin: 100px auto;
   text-align: center;
-  width: 350px;
 }
 
-.login-box h2 {
-  margin-bottom: 20px;
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  margin-bottom: 10px;
 }
 
 .input-box {
   position: relative;
-  margin-bottom: 20px;
+  margin: 20px 0;
+}
+
+.input-box i {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #00ff00;
 }
 
 .input-box input {
   width: 100%;
-  padding: 12px 40px 12px 35px;
-  background: #222;
-  border: none;
-  border-radius: 5px;
+  padding: 10px 10px 10px 35px;
+  background: #111;
+  border: 1px solid #00ff00;
   color: white;
-  font-size: 16px;
-}
-
-.input-box i.fa-user,
-.input-box i.fa-lock {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888;
+  border-radius: 5px;
 }
 
 #togglePassword {
   position: absolute;
+  top: 12px;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
-  color: #888;
 }
 
 button {
-  width: 100%;
-  padding: 12px;
-  background: #00ff00;
-  border: none;
+  background-color: #00ff00;
   color: black;
-  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .motto {
   margin-top: 20px;
   font-style: italic;
-  font-size: 14px;
-  color: #aaa;
+  color: #00ff00;
 }
